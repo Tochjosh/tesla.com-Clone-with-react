@@ -1,35 +1,35 @@
-import React from 'react'
-import styled from 'styled-components'
-import Section from './Section'
+import React from 'react';
+import styled from 'styled-components';
+import Section from './Section';
 
 
 function Home() {
   return (
     <Container>
         <Section 
+        title="Model y"
+        description="Order Online for Touchless Delivery"
+        backgroundImage="model-y.jpg"
+        leftButton="Custom order"
+        rightButton="existing inventory"
+        />
+         <Section 
         title="Model s"
-        description="order Online for Touchless delivery"
+        description="Order Online for Touchless Delivery"
         backgroundImage="model-s.jpg"
         leftButton="Custom order"
         rightButton="existing inventory"
         />
          <Section 
         title="Model x"
-        description="order Online for Touchless delivery"
+        description="Order Online for Touchless Delivery"
         backgroundImage="model-x.jpg"
         leftButton="Custom order"
         rightButton="existing inventory"
         />
          <Section 
-        title="Model y"
-        description="order Online for Touchless delivery"
-        backgroundImage="model-y.jpg"
-        leftButton="Custom order"
-        rightButton="existing inventory"
-        />
-         <Section 
         title="Model 3"
-        description="order Online for Touchless delivery"
+        description="Order Online for Touchless Delivery"
         backgroundImage="model-3.jpg"
         leftButton="Custom order"
         rightButton="existing inventory"
@@ -62,5 +62,4 @@ export default Home
 
 const Container = styled.div`
 height: 100vh;
- 
 `
