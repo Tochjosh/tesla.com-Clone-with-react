@@ -18,6 +18,17 @@ function Header() {
         <a href='#'>Tesla Account</a>
         <a href='#'>Menu</a>
         </RightMenu>
+        <BurgerNav>
+            <li href='#'>Existing Inventory</li>
+            <li href='#'>Used Inventory</li>
+            <li href='#'>Existing Inventory</li>
+            <li href='#'>Trade-In</li>
+            <li href='#'>Cyber Truck</li>
+            <li href='#'>Roadstar</li>
+            <li href='#'>Semi</li>
+            <li href='#'>Utilities</li>
+             <li href='#'>Test Drive</li>
+        </BurgerNav>
     </Container>
   )
 }
@@ -34,6 +45,7 @@ padding: 0 20px;
 top: 0;
 left: 0;
 right: 0;
+z-index: 1;
 
 `
 
@@ -70,5 +82,24 @@ a {
     margin-right: 10px;
     font-size: 14px;
 }
+`
 
+const BurgerNav = styled.div`
+position: fixed;
+top: 0;
+bottom: 0;
+right: 0;
+background: white;
+width: 300px;
+height: 100vh;
+list-style: none;
+display: flex;
+flex-direction: column;
+padding: 100px 30px ;
+text-align: left;
+li {
+    padding: 10px 0;
+    font-style: monospace;
+    font-size: 15px;
+}
 `
