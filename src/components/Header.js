@@ -16,9 +16,8 @@ const cars = useSelector(selectCars);
             <img src="Tesla Images/images/logo.svg" alt="tesla logo" />
         </a>
         <MainMenu>
-            {cars && cars.map((car, index) => (
-            <a key={index} href='#'>{car}</a>))
-        }
+            {cars && cars.map((car) => 
+            <a key={car.index} href='#'>{car}</a>)}
         </MainMenu>
         <RightMenu>
         <a href='#'>Shop</a>
@@ -29,6 +28,8 @@ const cars = useSelector(selectCars);
             <CloseWrap>
                 <CustomClose onClick={() => setShowburger(false)}/>
             </CloseWrap>
+            {cars && cars.map((car) => 
+            <li key={car.index} href='#'>{car}</li>)}
             <li href='#'>Existing Inventory</li>
             <li href='#'>Used Inventory</li>
             <li href='#'>Existing Inventory</li>
