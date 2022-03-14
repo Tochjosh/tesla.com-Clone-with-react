@@ -18,6 +18,8 @@ const cars = useSelector(selectCars);
         <MainMenu>
             {cars && cars.map((car) => 
             <a key={car.index} href='#'>{car}</a>)}
+            <a href='#'>Solar Panel</a>
+             <a href='#'>Solar Panels</a>
         </MainMenu>
         <RightMenu>
         <a href='#'>Shop</a>
