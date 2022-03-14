@@ -1,11 +1,14 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import CloseIcon from '@material-ui/icons/Close'
+import {selectCars} from '../features/car/carSlice'
+import {useSelector} from 'react-redux'
 // import Menu from '@material-ui/icons/Menu'
 
 
 function Header() {
 const [showBurger, setShowburger] = useState(false);
+const cars = useSelector(selectCars);
 
   return (
     <Container>
@@ -13,12 +16,9 @@ const [showBurger, setShowburger] = useState(false);
             <img src="Tesla Images/images/logo.svg" alt="tesla logo" />
         </a>
         <MainMenu>
-            <a href='#'>Model 3</a>
-            <a href='#'>Model s</a>
-            <a href='#'>Model x</a>
-            <a href='#'>Model y</a>
-            <a href='#'>Solar Roofs</a>
-            <a href='#'>Solar Panels</a>
+            {cars && cars.map((car, index) => (
+            <a key={index} href='#'>{car}</a>))
+        }
         </MainMenu>
         <RightMenu>
         <a href='#'>Shop</a>
